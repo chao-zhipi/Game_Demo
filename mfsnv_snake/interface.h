@@ -33,6 +33,11 @@ static RECT R3 = { r[2][0],r[2][1],r[2][2],r[2][3] };
 void drawmap();
 
 /*
+	初始化地图
+*/
+void initmap();
+
+/*
 	开始界面
  */
 int welcome();
@@ -53,5 +58,10 @@ void grade_tips();
 */
 void introduction();
 
+
+/*
+	得分
+*/
+void score();
 
 #endif

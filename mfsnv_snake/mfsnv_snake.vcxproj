@@ -140,10 +140,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="fond.cpp" />
     <ClCompile Include="interface.cpp" />
     <ClCompile Include="mfsnt_snake.cpp" />
+    <ClCompile Include="snake.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="food.h" />
     <ClInclude Include="interface.h" />
     <ClInclude Include="snake.h" />
   </ItemGroup>

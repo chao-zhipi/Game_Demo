@@ -5,7 +5,11 @@
 #include <string>
 #include <stdlib.h>
 #include <Windows.h>
+#include <time.h>
+#include "snake.h"
 #include "interface.h"
+#include "food.h"
+
 
 
 //按钮判断函数
@@ -29,7 +33,7 @@ int button_judge(int x, int y)
 
 
 void drawmap() {
-	//initgraph(MAP_WIDE, MAP_HEIGHT);
+	initgraph(640, 480);
 	setbkcolor(WHITE);
 	cleardevice(); //调用清屏cleardevice用背景色刷新背景
 	for (int i = 0; i < MAP_WIDE; i++)
@@ -49,6 +53,41 @@ void drawmap() {
 		fillrectangle((MAP_WIDE - 1) * SIZE, i * SIZE, MAP_WIDE * SIZE, (i + 1) * SIZE);
 
 	}
+
+
+}
+
+void initmap() {
+	//初始化蛇
+	head = (snake*)malloc(sizeof(snake));
+	head->x = (MAP_WIDE) / 2;
+	head->y = (MAP_HEIGHT) / 2;
+	snake* p = (snake*)malloc(sizeof(snake));
+	snake* q = (snake*)malloc(sizeof(snake));
+	p->x = head->x + 1;
+	p->y = head->y;
+	q->x = head->x + 2;
+	q->y = head->y;
+
+	head->next = p;
+	p->next = q;
+	tail = q;   // 最右边
+	tail->next = NULL;
+
+	snake* temp = head;  
+	// 打印蛇头
+	printnodeH(temp->x, temp->y);
+	temp = temp->next;
+	while (temp != NULL)//打印出所有结点
+	{
+		printnode(temp->x, temp->y);
+		temp = temp->next;
+	}
+	//初始化食物
+	srand((int)time(NULL));
+	food.x = rand() % (MAP_WIDE - 2) + 2;
+	food.y = rand() % (MAP_HEIGHT - 2) + 2;
+	printnode(food.x, food.y);
 
 }
 
@@ -138,4 +177,58 @@ int welcome() {
 			FlushMouseMsgBuffer();//清空鼠标消息缓存区
 		}
 	}
+}
+
+
+
+
+void introduction() {
+	float LIGHT = 0.7f;
+	IMAGE h;
+	char ch;
+
+	setbkcolor(WHITE);
+	loadimage(&h, _T("help.png"), 860, 600);
+	putimage(0, 0, &h, SRCINVERT);
+
+	do
+	{
+		ch = _getch();
+		if (ch == 'x' || ch == 'X')
+		{
+			break;
+		}
+	} while (1);
+
+	//flag = 1;
+}
+
+void score() {
+
+	wchar_t s[] = L"分数";
+	wchar_t s2[] = L"最高分";
+	TCHAR s1[5];
+	TCHAR m1[5];
+	int m;
+
+	//m = getMAX();
+	//SetWorkingImage(NULL);
+	//getimage(&a, 600, 300, 200, 200);
+	//putimage(550, 120, &a);
+
+	setbkmode(TRANSPARENT);                //文本透明
+	settextcolor(BLACK);
+	settextstyle(40, 20, _T("微软雅黑"));
+	outtextxy(500, 5, s);
+	settextstyle(40, 20, _T("微软雅黑"));
+	outtextxy(500, 200, s2);
+
+	//_stprintf_s(s1, _T("%d"), number);
+	//settextcolor(RED);
+	//settextstyle(60, 30, _T("微软雅黑"));
+	//outtextxy(550, 200, s1);
+
+	//_stprintf_s(m1, _T("%d"), m);
+	//settextcolor(GREEN);
+	//outtextxy(680, 200, m1);
 }

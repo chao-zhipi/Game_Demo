@@ -8,17 +8,18 @@ int main()
 {
 	switch (welcome()) {
 	case 1:	
-		cleardevice();
+		closegraph();
 		drawmap();
-		//score();
-		//initsnake();
+		initmap();
+		score();
+		
 		//food();
 		//keyboardControl();
 		break;
 	case 2:
 		cleardevice();
-		//help();
-		//main();
+		introduction();
+		main();
 		break;
 	}
 	system("pause");
