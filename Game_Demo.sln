@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyX_Demo", "EasyX_Demo\EasyX_Demo.vcxproj", "{ECD0F0EC-CCD0-4C86-9185-AA8BF73F27FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfsnt_snake", "mfsnv_snake\mfsnv_snake.vcxproj", "{112BC284-2986-44AA-BA70-EF957D0B95B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{ECD0F0EC-CCD0-4C86-9185-AA8BF73F27FF}.Release|x64.Build.0 = Release|x64
 		{ECD0F0EC-CCD0-4C86-9185-AA8BF73F27FF}.Release|x86.ActiveCfg = Release|Win32
 		{ECD0F0EC-CCD0-4C86-9185-AA8BF73F27FF}.Release|x86.Build.0 = Release|Win32
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Debug|x64.ActiveCfg = Debug|x64
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Debug|x64.Build.0 = Debug|x64
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Debug|x86.Build.0 = Debug|Win32
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Release|x64.ActiveCfg = Release|x64
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Release|x64.Build.0 = Release|x64
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Release|x86.ActiveCfg = Release|Win32
+		{112BC284-2986-44AA-BA70-EF957D0B95B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
