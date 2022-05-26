@@ -6,7 +6,21 @@
 
 int main()
 {
-	welcome();
+	switch (welcome()) {
+	case 1:	
+		cleardevice();
+		drawmap();
+		//score();
+		//initsnake();
+		//food();
+		//keyboardControl();
+		break;
+	case 2:
+		cleardevice();
+		//help();
+		//main();
+		break;
+	}
 	system("pause");
 	return 0;
 }

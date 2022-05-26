@@ -11,6 +11,11 @@
 #include <stdlib.h>
 #include <Windows.h>
 
+
+#define MAP_WIDE 30
+#define MAP_HEIGHT 30
+#define SIZE 16
+
 // 画布
 static HWND hOut;
  
@@ -19,22 +24,24 @@ static RECT R1 = { r[0][0],r[0][1],r[0][2],r[0][3] };
 static RECT R2 = { r[1][0],r[1][1],r[1][2],r[1][3] };
 static RECT R3 = { r[2][0],r[2][1],r[2][2],r[2][3] };
 
-/**
- * @brief 绘制贪吃蛇图形
- *
- */
-void printsnake();
 
-/**设置光标移动的位置
- * @param x x坐标
- * @param y y坐标
- */
-void gotoxy(int x, int y);
+
+
+/*
+	画地图
+*/
+void drawmap();
 
 /*
 	开始界面
  */
-void welcome();
+int welcome();
+
+
+/*
+	按钮判断函数
+*/
+int button_judge(int x, int y);
 
 /*
 	难度等级选择界面 
@@ -46,9 +53,5 @@ void grade_tips();
 */
 void introduction();
 
-/*
-	文字颜色函数
-*/
-int color(int c);
 
 #endif
