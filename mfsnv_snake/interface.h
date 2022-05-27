@@ -16,6 +16,8 @@
 #define MAP_HEIGHT 30
 #define SIZE 16
 
+static int score = 0;//得分
+
 // 画布
 static HWND hOut;
  
@@ -62,6 +64,6 @@ void introduction();
 /*
 	得分
 */
-void score();
+void showscore();
 
 #endif

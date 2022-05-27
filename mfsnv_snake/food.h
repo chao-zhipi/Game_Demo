@@ -10,6 +10,9 @@ typedef struct Food {
 	int y;
 }; //并创建了一个食物
 static Food food;
-void printnodeH(int x, int y);
 
+static int grow = 0; //grow =0 表示没吃到食物，grow = 1表示吃到食物
+
+void printnodeH(int x, int y);
+void updatefood();
 #endif

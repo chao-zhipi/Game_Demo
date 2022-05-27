@@ -203,7 +203,7 @@ void introduction() {
 	//flag = 1;
 }
 
-void score() {
+void showscore() {
 
 	wchar_t s[] = L"分数";
 	wchar_t s2[] = L"最高分";

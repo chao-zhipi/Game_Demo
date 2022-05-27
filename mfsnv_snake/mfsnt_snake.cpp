@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "interface.h"
+#include "snake.h"
 
 int main()
 {
@@ -11,8 +12,8 @@ int main()
 		closegraph();
 		drawmap();
 		initmap();
-		score();
-		
+		//showscore();
+		//movesnake();
 		//food();
 		//keyboardControl();
 		break;

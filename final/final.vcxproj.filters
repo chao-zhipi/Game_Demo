@@ -15,27 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mfsnt_snake.cpp">
+    <ClCompile Include="final.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="interface.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="snake.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="food.cpp">
+    <ClCompile Include="game.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="interface.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="snake.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="food.h">
+    <ClInclude Include="game.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
